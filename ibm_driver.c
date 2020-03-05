@@ -33,6 +33,10 @@
 #include "zend_exceptions.h"
 #include <stdio.h>
 
+#ifdef PASE
+#include "sqlca.h"                     /* Required include file */
+#endif
+
 extern struct pdo_stmt_methods ibm_stmt_methods;
 extern int ibm_stmt_dtor(pdo_stmt_t *stmt TSRMLS_DC);
 
